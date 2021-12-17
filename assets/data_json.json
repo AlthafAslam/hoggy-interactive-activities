@@ -1,0 +1,163 @@
+[
+  {
+    "attrs": {
+      "size": { "width": 800, "height": 450 },
+      "backgroundColor": {
+        "type": "linear",
+        "breakPoints": [
+          {
+            "point": 0,
+            "color": "#FA8BFF"
+          },
+          { "point": 0.5, "color": "#2BD2FF" },
+          { "point": 0.9, "color": "#2BFF88" }
+        ]
+      },
+      "lottieBackground": {
+        "url": "https://lottiefiles.com/16477-rain-background-animation",
+        "asset": "https://assets7.lottiefiles.com/packages/lf20_LOle4Y.json"
+      }
+    },
+    "children": [
+      {
+        "type": "text",
+        "text": "Headline text",
+        "x": 161,
+        "y": 160,
+        "color": "rgba(255, 255, 255, 1)",
+        "fontSize": 76,
+        "bold": true,
+        "italic": false
+      },
+      {
+        "type": "image",
+        "src": "https://s3.ap-south-1.amazonaws.com/res.myhoggy.co/kizcastle/Courses/wash.png",
+        "x": 73,
+        "y": 299,
+        "height": 100,
+        "width": 100
+      },
+      {
+        "type": "image",
+        "src": "https://s3.ap-south-1.amazonaws.com/res.myhoggy.co/kizcastle/Courses/exer.png",
+        "x": 358,
+        "y": 296,
+        "height": 100,
+        "width": 100
+      },
+      {
+        "type": "image",
+        "src": "https://s3.ap-south-1.amazonaws.com/res.myhoggy.co/kizcastle/Courses/comb.png",
+        "x": 606,
+        "y": 297,
+        "height": 100,
+        "width": 100
+      }
+    ]
+  },
+  {
+    "attrs": {
+      "size": { "width": 800, "height": 450 },
+      "backgroundColor": {
+        "type": "linear",
+        "breakPoints": [
+          { "point": 0, "color": "#2B2DFF" },
+          { "point": 1, "color": "#2B2DFF" }
+        ]
+      },
+      "lottieBackground": {
+        "url": "https://lottiefiles.com/88151-trunkrs-tt-background",
+        "asset": "https://assets7.lottiefiles.com/packages/lf20_u1acqsf6.json"
+      }
+    },
+    "children": [
+      {
+        "type": "text",
+        "text": "Demo text",
+        "x": 161,
+        "y": 120,
+        "color": "rgba(255, 255, 255, 1)",
+        "fontSize": 76,
+        "bold": true,
+        "italic": false
+      },
+      {
+        "type": "image",
+        "src": "https://s3.ap-south-1.amazonaws.com/res.myhoggy.co/kizcastle/Courses/wash.png",
+        "x": 73,
+        "y": 299,
+        "height": 100,
+        "width": 100
+      },
+      {
+        "type": "image",
+
+        "src": "https://freesvg.org/img/Gerald-G-Cartoon-Cat-Walking.png",
+        "x": 336,
+        "y": 231,
+        "height": 100,
+        "width": 100
+      },
+      {
+        "type": "image",
+        "src": "https://s3.ap-south-1.amazonaws.com/res.myhoggy.co/kizcastle/Courses/comb.png",
+        "x": 606,
+        "y": 297,
+        "height": 100,
+        "width": 100
+      }
+    ]
+  },
+  {
+    "attrs": {
+      "size": { "width": 800, "height": 450 },
+      "backgroundColor": {
+        "type": "linear",
+        "breakPoints": [
+          { "point": 0, "color": "#22c1c3" },
+          { "point": 1, "color": "#2dfd78" }
+        ]
+      },
+      "lottieBackground": {
+        "url": "https://lottiefiles.com/40912-new-year-loop-background",
+        "asset": "https://assets9.lottiefiles.com/packages/lf20_evz3Cm.json"
+      }
+    },
+    "children": [
+      {
+        "type": "text",
+        "text": "Sample Text",
+        "x": 158,
+        "y": 25,
+        "color": "rgba(100, 200, 255, 1)",
+        "fontSize": 76,
+        "bold": true,
+        "italic": false
+      },
+      {
+        "type": "image",
+        "src": "https://cdn.pixabay.com/photo/2020/11/15/18/51/cat-5746875_1280.png",
+        "x": 74,
+        "y": 147,
+        "height": 100,
+        "width": 100
+      },
+      {
+        "type": "image",
+        "src": "https://freesvg.org/img/Gerald-G-Cartoon-Cat-Walking.png",
+        "x": 336,
+        "y": 231,
+        "height": 100,
+        "width": 100
+      },
+      {
+        "type": "image",
+        "src": "https://cdn.pixabay.com/photo/2021/02/11/16/22/cat-6005847_1280.png",
+        "x": 640,
+        "y": 292,
+        "height": 100,
+        "width": 100
+      }
+    ]
+  }
+]
