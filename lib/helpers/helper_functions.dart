@@ -15,22 +15,22 @@ class HelperFunctions {
     }
   }
 
+  ///Return List of color from the breakPoints List from the JSON.
   static List<Color> colorFromBreakPoints(List<BreakPoint> breakPointList) {
     List<Color> hexColorArray = [];
     breakPointList.forEach((element) {
       Color hexColor = HelperFunctions.returnColorFromString(element.color);
       hexColorArray.add(hexColor);
     });
-    print("HexColorArray $hexColorArray");
     return hexColorArray;
   }
 
+  ///Return list of Stoplist from the breakPoints List from the JSON
   static List<double> stopListFromBreakPoint(List<BreakPoint> breakPointList) {
     List<double> stopListArray = [];
     breakPointList.forEach((element) {
       stopListArray.add(element.point);
     });
-    print("stopListArray $stopListArray");
     return stopListArray;
   }
 
@@ -39,15 +39,14 @@ class HelperFunctions {
     for (var i = 0; i < list.length; i++) {
       result.add(handler(i, list[i]));
     }
-
     return result;
   }
 
-  /// Convert "rgba(255, 255, 255, 1)" strings into Color
+  /// Convert "rgba(255, 255, 255, 1)" strings into Color []
   static Color returnColorFromRGBO(String colorString) {
-    String colors = colorString.replaceAll(RegExp(r'[^0-9,]'), '');
+    String colors = colorString.replaceAll(RegExp(r'[^0-9\.,]'), '');
     List<String> grboStringList = colors.split(',');
-    List<int> grboIntList = grboStringList.map(int.parse).toList();
-    return Color.fromRGBO(grboIntList[0], grboIntList[1], grboIntList[2], grboIntList[3].toDouble());
+    List<double> grboIntList = grboStringList.map(double.parse).toList();
+    return Color.fromRGBO(grboIntList[0].toInt(), grboIntList[1].toInt(), grboIntList[2].toInt(), grboIntList[3]);
   }
 }

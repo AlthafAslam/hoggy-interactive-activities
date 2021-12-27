@@ -29,35 +29,42 @@ class InteractionWidget extends StatefulWidget {
 class _InteractionWidgetState extends State<InteractionWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: widget.containerHeight,
-      width: widget.containerWidth,
-      decoration: BoxDecoration(gradient: LinearGradient(colors: widget.colorList, stops: widget.stopList)),
-      child: Stack(
-        fit: StackFit.expand,
-        children: HelperFunctions.map<Widget>(widget.childWidgets, (index, Child data) {
-          return data.type == Type.TEXT
-              ? Positioned(
-                  top: data.x!.toDouble(),
-                  left: data.y!.toDouble(),
-                  child: Container(
-                      child: Text(data.text!,
-                          style: TextStyle(
-                            fontSize: data.fontSize!.toDouble(),
-                            fontWeight: data.bold == true ? FontWeight.bold : FontWeight.normal,
-                            color: HelperFunctions.returnColorFromRGBO(data.color!),
-                          ))),
-                )
-              : Positioned(
-                  top: data.x!.toDouble(),
-                  left: data.y!.toDouble(),
-                  child: Container(
-                    height: data.height!.toDouble(),
-                    width: data.width!.toDouble(),
-                    child: Image.network(data.src!),
-                  ),
-                );
-        }),
+    return AnimatedSwitcher(
+      // transitionBuilder: (Widget child, Animation<double> animation) {
+      //   return ScaleTransition(scale: animation, child: child);
+      // },
+      duration: const Duration(milliseconds: 500),
+      child: AspectRatio(
+        aspectRatio: widget.containerWidth / widget.containerHeight,
+        child: Container(
+          decoration: BoxDecoration(gradient: LinearGradient(colors: widget.colorList, stops: widget.stopList)),
+          child: Stack(
+            fit: StackFit.expand,
+            children: HelperFunctions.map<Widget>(widget.childWidgets, (index, Child data) {
+              return data.type == Type.TEXT
+                  ? Align(
+                      alignment: FractionalOffset(data.x!.toDouble() / MediaQuery.of(context).size.width,
+                          data.y!.toDouble() / MediaQuery.of(context).size.height),
+                      child: Container(
+                          child: Text(data.text!,
+                              style: TextStyle(
+                                fontSize: data.fontSize!.toDouble(),
+                                fontWeight: data.bold == true ? FontWeight.bold : FontWeight.normal,
+                                color: HelperFunctions.returnColorFromRGBO(data.color!),
+                              ))),
+                    )
+                  : Align(
+                      alignment: FractionalOffset(data.x!.toDouble() / MediaQuery.of(context).size.width,
+                          data.y!.toDouble() / MediaQuery.of(context).size.height),
+                      child: Container(
+                        height: data.height!.toDouble(),
+                        width: data.width!.toDouble(),
+                        child: Image.network(data.src!),
+                      ),
+                    );
+            }),
+          ),
+        ),
       ),
     );
   }
